@@ -28,6 +28,18 @@ const router = createBrowserRouter([
           };
         },
       },
+      {
+
+    path: "/register",
+    lazy: async () => {
+        const module = await import("../pages/register/register");
+
+        return {
+            Component: module.default,
+        };
+    
+},
+      },
     ],
   },
 ]);
